@@ -1,0 +1,131 @@
+# Signs the update metadata's snapshot and timestamp and publishes metadata/ to GitHub Pages (releases.whombat.com).
+# Whombat LNK-24, LNK-25: on every push of role metadata (the publisher on The Beast) and every 6 hours, so the
+# timestamp (3 days) never runs out; one run at a time; a warning 30, 14 and 7 days before any role expires.
+# The snapshot and timestamp keys are this repository's Actions secrets; no other key is ever here. A role file that
+# doesn't verify (a broken push, a wrong key) is passed over: Pages keeps serving that role's last good version, an
+# issue says which file, and the run ends red after the deploy.
+name: Update metadata
+
+on:
+  push:
+    branches: [main]
+    paths: ["metadata/**"]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: update-metadata
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sign:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write # commit the new snapshot and timestamp
+      issues: write # the expiry warning, a role file that didn't verify
+    outputs:
+      skipped: ${{ steps.resign.outputs.skipped }}
+    steps:
+      - name: Check out the metadata
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: releases
+      - name: Check out the signing tool
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.APPLIANCE_REPO }}
+          ref: ${{ vars.APPLIANCE_REF }}
+          path: appliance
+          # A read-only deploy key while the appliance repository is private; without the secret, a plain checkout.
+          ssh-key: ${{ secrets.APPLIANCE_DEPLOY_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: appliance/go.mod
+          cache-dependency-path: appliance/go.sum
+      - name: Build tufrepo
+        working-directory: appliance
+        run: go build -trimpath -o "$RUNNER_TEMP/tufrepo" ./release-tools/cmd/tufrepo
+      - name: Sign snapshot and timestamp
+        id: resign
+        env:
+          TUF_SNAPSHOT_KEY: ${{ secrets.TUF_SNAPSHOT_KEY }}
+          TUF_TIMESTAMP_KEY: ${{ secrets.TUF_TIMESTAMP_KEY }}
+        run: |
+          set -o pipefail
+          "$RUNNER_TEMP/tufrepo" gh-resign --metadata releases/metadata --annotations | tee "$RUNNER_TEMP/resign.txt"
+      - name: Open an issue when a role file didn't verify
+        if: steps.resign.outputs.skipped != '' && steps.resign.outputs.skipped != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          body="$(grep '^::error' "$RUNNER_TEMP/resign.txt" | sed 's/^::error[^:]*:://')"
+          open="$(gh issue list --state open --search 'in:title "A role file did not verify"' --json number --jq '.[0].number')"
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "$body"
+          else
+            gh issue create --title "A role file did not verify" --body "$body"
+          fi
+      - name: Check the roles' expiry
+        run: |
+          "$RUNNER_TEMP/tufrepo" gh-expiry --metadata releases/metadata --warn-days 30,14,7 --annotations | tee "$RUNNER_TEMP/expiry.txt"
+      - name: Open an issue when a role expires within 30 days
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if grep -q '^::' "$RUNNER_TEMP/expiry.txt"; then
+            body="$(grep -v '^::' "$RUNNER_TEMP/expiry.txt")"
+            open="$(gh issue list --state open --search 'in:title "A TUF role expires soon"' --json number --jq '.[0].number')"
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body "$body"
+            else
+              gh issue create --title "A TUF role expires soon" --body "$body"
+            fi
+          fi
+      - name: Commit the signatures
+        working-directory: releases
+        run: |
+          git config user.name "Whombat releases"
+          git config user.email "releases@whombat.com"
+          git add -A metadata
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "metadata: snapshot and timestamp signed"
+          # The publisher may have pushed role metadata meanwhile: that push starts the next run, which signs it.
+          for i in 1 2 3; do
+            git push -q origin HEAD:main && exit 0
+            git pull -q --rebase origin main
+          done
+          exit 1
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: releases/metadata
+
+  deploy:
+    needs: sign
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Last, after Pages has the fresh snapshot over the last good roles: a role file that didn't verify ends the run red.
+  skipped:
+    needs: [sign, deploy]
+    if: needs.sign.outputs.skipped != '' && needs.sign.outputs.skipped != '0'
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          echo "::error title=A role file did not verify::${{ needs.sign.outputs.skipped }} role file(s) passed over; see the issue and the sign job"
+          exit 1

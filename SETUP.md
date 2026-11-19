@@ -16,10 +16,11 @@ branch as they are; the publisher's `tufrepo gh-init` adds `metadata/` and `.git
 |---|---|---|
 | `TUF_SNAPSHOT_KEY` | secret | the snapshot key file (JSON) from `tufrepo gh-continue`'s offline keys folder (`snapshot.json`) |
 | `TUF_TIMESTAMP_KEY` | secret | the timestamp key file (JSON) from the same folder (`timestamp.json`) |
-| `APPLIANCE_REPO` | variable | the public whombat-appliance repository that holds `tufrepo` (`owner/name`) |
+| `APPLIANCE_DEPLOY_KEY` | secret | while whombat-appliance is private: the private half of a read-only deploy key on it (the workflow checks it out with it); remove both once the repository is public |
+| `APPLIANCE_REPO` | variable | the whombat-appliance repository that holds `tufrepo` (`owner/name`) |
 | `APPLIANCE_REF` | variable | the commit of it the workflow builds `tufrepo` from (a full SHA; change it on purpose) |
 
-No other key comes here: root, top-level targets and production are offline; development and clients stay on The
+No other signing key comes here: root, top-level targets and production are offline; development and clients stay on The
 Beast. Settings → Actions → General: workflow permissions **read** by default (the workflow asks for what it needs).
 
 ## The publisher's token

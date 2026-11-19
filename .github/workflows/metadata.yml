@@ -103,6 +103,11 @@ jobs:
             git pull -q --rebase origin main
           done
           exit 1
+      # A missing file must answer 404: a box's TUF client asks for the next root (`<n+1>.root.json`) at every refresh
+      # and stops only on a 404 or 403. GitHub's own not-found page has answered 503 ("Unicorns") on this site, which
+      # fails every refresh; a 404.html of our own in the artifact (never committed, never a TUF file) avoids it.
+      - name: A page for missing files
+        run: printf '<!doctype html><meta charset="utf-8"><title>Not found</title><p>Not found.</p>\n' > releases/metadata/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: releases/metadata

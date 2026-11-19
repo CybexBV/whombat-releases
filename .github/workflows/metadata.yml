@@ -1,5 +1,5 @@
 # Signs the update metadata's snapshot and timestamp and publishes metadata/ to GitHub Pages (releases.whombat.com).
-# Whombat LNK-24, LNK-25: on every push of role metadata (the publisher on The Beast) and every 6 hours, so the
+# Whombat LNK-24, LNK-25: on every push of role metadata (the publisher) and every 6 hours, so the
 # timestamp (3 days) never runs out; one run at a time; a warning 30, 14 and 7 days before any role expires.
 # The snapshot and timestamp keys are this repository's Actions secrets; no other key is ever here. A role file that
 # doesn't verify (a broken push, a wrong key) is passed over: Pages keeps serving that role's last good version, an

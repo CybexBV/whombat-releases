@@ -20,8 +20,11 @@ branch as they are; the publisher's `tufrepo gh-init` adds `metadata/` and `.git
 | `APPLIANCE_REPO` | variable | the whombat-appliance repository that holds `tufrepo` (`owner/name`) |
 | `APPLIANCE_REF` | variable | the commit of it the workflow builds `tufrepo` from (a full SHA; change it on purpose) |
 
-No other signing key comes here: root, top-level targets and production are offline; development and clients stay on The
-Beast. Settings → Actions → General: workflow permissions **read** by default (the workflow asks for what it needs).
+No other signing key comes here: production is offline; root, top-level targets, development and clients stay with the
+publisher, where the DEV candidate runs (root and top-level targets go offline with the production key ceremony).
+Settings → Actions → General: workflow permissions **read** by default (the workflow asks for what it needs).
+Settings → General → Features: **Issues** on (the workflow opens one when a role expires within 30 days or a role file
+doesn't verify; with Issues off that step fails).
 
 ## The publisher's token
 

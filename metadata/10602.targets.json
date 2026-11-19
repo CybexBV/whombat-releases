@@ -1,0 +1,114 @@
+{
+ "signatures": [
+  {
+   "keyid": "b1df7cf2cbde76939559c70a50ddef22e63d05ec8b7fe9ee037904c3cb0e7fb0",
+   "sig": "e98b877e7d25c0ace8862f175166477c917e590e64e3bb1d8d1875c16a5b3d1d91e5cbc76bcbccb4af1a82d68ab84cbe21ed199df52899c9a15833f31ff9cc05"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "delegations": {
+   "keys": {
+    "14d993838e3435218444ea1e44fef44c682f5f6a46ef531d0deb48734aff92d9": {
+     "keytype": "ed25519",
+     "keyval": {
+      "public": "d1829b4d55bddec5bf8d3e29c7796cdf1c1d67d06965cb4fcbc9413ea90b00ef"
+     },
+     "scheme": "ed25519"
+    },
+    "3c68fdaf61b2a4e5d2faf02f5c3e9c4ca3aa2e8e5896205ed1188dc9423e86bc": {
+     "keytype": "ed25519",
+     "keyval": {
+      "public": "699e1b3206cebcda534a96144ae4fcd9f83e36bc10b20674659f5a85a4e9d36b"
+     },
+     "scheme": "ed25519"
+    },
+    "8fdcff0412cafd862b19a7a92d8809f86443659790a72615c589a7ab11e7d1ca": {
+     "keytype": "ed25519",
+     "keyval": {
+      "public": "c1a4ed124a0701f3db257b1383e70cc557853a62450cb75b46baf87abe653762"
+     },
+     "scheme": "ed25519"
+    }
+   },
+   "roles": [
+    {
+     "keyids": [
+      "3c68fdaf61b2a4e5d2faf02f5c3e9c4ca3aa2e8e5896205ed1188dc9423e86bc"
+     ],
+     "name": "clients",
+     "paths": [
+      "clients/*",
+      "clients/*/*/*"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "8fdcff0412cafd862b19a7a92d8809f86443659790a72615c589a7ab11e7d1ca"
+     ],
+     "name": "production",
+     "paths": [
+      "production/releases/*",
+      "production/host/*/*",
+      "production/runtime/*/*",
+      "production/provider/*/*/*"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "14d993838e3435218444ea1e44fef44c682f5f6a46ef531d0deb48734aff92d9"
+     ],
+     "name": "development",
+     "paths": [
+      "development/releases/*",
+      "development/host/*/*",
+      "development/runtime/*/*",
+      "development/provider/*/*/*"
+     ],
+     "terminating": true,
+     "threshold": 1
+    }
+   ]
+  },
+  "expires": "2027-11-19T06:20:28.379002653Z",
+  "spec_version": "1.0.31",
+  "targets": {
+   "control/assignment-keys.json": {
+    "custom": {
+     "whombat": {
+      "document": {
+       "v": 1,
+       "env": "local",
+       "keys": [
+        {
+         "kid": "asg-dev-40c9d8b036e1",
+         "publicKey": "972c3846ac7d5f75d30f7c8029c1b21f73e6b4326cffe8d10abf066e78af4a31",
+         "state": "active",
+         "notBefore": null,
+         "notAfter": null
+        },
+        {
+         "kid": "asg-local-2026-09-27",
+         "publicKey": "308b0c84982a1f1dbba46eba707f219ae3e66f786e5e52400a96517f3c4fdef4",
+         "state": "active",
+         "notBefore": null,
+         "notAfter": null
+        }
+       ]
+      },
+      "kind": "assignment-keys"
+     }
+    },
+    "hashes": {
+     "sha256": "3dc1b6f109e2b0bb42dd3df40890c14c5ad3899b5ee2502a401f52206dc6a978"
+    },
+    "length": 350
+   }
+  },
+  "version": 10602
+ }
+}

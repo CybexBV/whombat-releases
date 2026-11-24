@@ -1,0 +1,464 @@
+{
+ "signatures": [
+  {
+   "keyid": "8fdcff0412cafd862b19a7a92d8809f86443659790a72615c589a7ab11e7d1ca",
+   "sig": "353741a596ace112b48f037e81baf98db6932bd1913e9bef3156bc72c2a423836f09ba3a73e6d32059750572c0260221551ec8775dfd03e39f788c4a1b790c07"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "expires": "2027-03-24T13:47:35.398443241Z",
+  "spec_version": "1.0.31",
+  "targets": {
+   "production/host/whombat-20261122.2/whombat-host.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "host-generation",
+      "version": "whombat-20261122.2",
+      "storePath": "/nix/store/dmqdik8mclssy3k5f7k5g0kisgk83yyh-nixos-system-whombat-26.05.20260924.c508844",
+      "narHash": "sha256:46623854546204f80824fca63adcbe6a2fa034f8ac9fc8c6c051cea8f4c75b3f",
+      "closureSize": 7728178672,
+      "managerStorePath": "/nix/store/cc1cvr0jy87f5pf0jssxz4ldflizfiqs-whombat-manager-0.3.0-20261122115939.4d8628a",
+      "paths": 1498,
+      "downloadSize": 3559056630
+     }
+    },
+    "hashes": {
+     "sha256": "98211eff04d4b98f120cc93e05d7f07b41a0440119a0820c5bff468f804dcc1d"
+    },
+    "length": 979614
+   },
+   "production/host/whombat-20261122.9/whombat-host.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "host-generation",
+      "version": "whombat-20261122.9",
+      "storePath": "/nix/store/8hykmchv318ijjs8b4wp65bk9k0znm8p-nixos-system-whombat-26.05.20260924.c508844",
+      "narHash": "sha256:91ca15ac56119d0308f7dfbdf2acecc1e9dad0e312a6e8fa238c2941e448f422",
+      "closureSize": 7728285688,
+      "managerStorePath": "/nix/store/60m7kz8npmdx29x2ap9dx9f7garqc8zk-whombat-manager-0.3.0-20261122214237.1680a52",
+      "paths": 1498,
+      "downloadSize": 3559297174
+     }
+    },
+    "hashes": {
+     "sha256": "5bad4c74bd0121059ca54caceea140f7925893c89cacca6afb3449cecaa30d66"
+    },
+    "length": 978705
+   },
+   "production/host/whombat-20261123.11/whombat-host.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "host-generation",
+      "version": "whombat-20261123.11",
+      "storePath": "/nix/store/igcmrzwshpl1vja1awwfm32jkf7xdgc2-nixos-system-whombat-26.05.20260924.c508844",
+      "narHash": "sha256:44e4c80939f443a22c9b378fd329e69c7a6e683a6ed4694f6cb57067c0edab81",
+      "closureSize": 7730233320,
+      "managerStorePath": "/nix/store/jg6dfin95fl33lpp11aj6fyj5hnvq5f8-whombat-manager-0.3.0-20261123165245.4b86649",
+      "paths": 1498,
+      "downloadSize": 3559849046
+     }
+    },
+    "hashes": {
+     "sha256": "7fb49d2a5f99a7842dbb7daff545e555aceac5819e30c9e42c09d01a2e8f2d36"
+    },
+    "length": 979368
+   },
+   "production/host/whombat-20261123.4/whombat-host.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "host-generation",
+      "version": "whombat-20261123.4",
+      "storePath": "/nix/store/2glhhbmbf6bxzsxz2cjwpdjjmy3dpf4s-nixos-system-whombat-26.05.20260924.c508844",
+      "narHash": "sha256:ed404c814852f3ab24ec8a9db6e25dd991423923a4db6979918ba6e193d0f663",
+      "closureSize": 7728873000,
+      "managerStorePath": "/nix/store/9yj31v0q2f9nb0w5bb3qkdhcqy16jy8s-whombat-manager-0.3.0-20261123083323.1d43577",
+      "paths": 1498,
+      "downloadSize": 3559469846
+     }
+    },
+    "hashes": {
+     "sha256": "2e7c4939a85dd21b6b7edb9f6ca7544471118c8f7e9c105d283a4e7a9df061a3"
+    },
+    "length": 979130
+   },
+   "production/releases/whombat-20261122.2.json": {
+    "custom": {
+     "whombat": {
+      "kind": "release-tuple",
+      "tuple": {
+       "releaseId": "whombat-20261122.2",
+       "runtime": {
+        "version": "0.2.0-20261122115939.4d8628a",
+        "storePath": "/nix/store/y7vxq4ac577ag5wlvcnqq1qwsvm421fk-whombat-runtime-0.2.0-20261122115939.4d8628a",
+        "narHash": "sha256:26f4b9b57774a31846299b0658cef7e517a599c6ce4aab4c73596e00cf35a1df",
+        "schemaReads": {
+         "min": 77,
+         "max": 92
+        },
+        "schemaWrites": 92,
+        "protocol": {
+         "min": 5000,
+         "max": 5003
+        },
+        "hostAbi": {
+         "min": 1,
+         "max": 1
+        }
+       },
+       "providers": [],
+       "host": {
+        "version": "whombat-20261122.2",
+        "storePath": "/nix/store/dmqdik8mclssy3k5f7k5g0kisgk83yyh-nixos-system-whombat-26.05.20260924.c508844",
+        "narHash": "sha256:46623854546204f80824fca63adcbe6a2fa034f8ac9fc8c6c051cea8f4c75b3f",
+        "abi": 1
+       },
+       "manager": {
+        "version": "0.3.0-20261122115939.4d8628a",
+        "storePath": "/nix/store/cc1cvr0jy87f5pf0jssxz4ldflizfiqs-whombat-manager-0.3.0-20261122115939.4d8628a",
+        "narHash": "sha256:e94a0dd5a83263036456e48e77865881d8b9fc8efee00d8412fa11f74e1ad3e7"
+       }
+      }
+     }
+    },
+    "hashes": {
+     "sha256": "5f6e690155e9c65cda0b05a3f89a08aa7ad3f18a9b4d69fea4037078e8617d69"
+    },
+    "length": 878
+   },
+   "production/releases/whombat-20261122.9.json": {
+    "custom": {
+     "whombat": {
+      "kind": "release-tuple",
+      "tuple": {
+       "releaseId": "whombat-20261122.9",
+       "runtime": {
+        "version": "0.2.0-20261122214237.1680a52",
+        "storePath": "/nix/store/596pky7ddc413vvad85mgh8ysbkavhh7-whombat-runtime-0.2.0-20261122214237.1680a52",
+        "narHash": "sha256:63a2be463d35170910b97b8dff2a1dfe33dae8fc78e04587632a13a7801fbf13",
+        "schemaReads": {
+         "min": 77,
+         "max": 92
+        },
+        "schemaWrites": 92,
+        "protocol": {
+         "min": 5000,
+         "max": 5003
+        },
+        "hostAbi": {
+         "min": 1,
+         "max": 1
+        }
+       },
+       "providers": [],
+       "host": {
+        "version": "whombat-20261122.9",
+        "storePath": "/nix/store/8hykmchv318ijjs8b4wp65bk9k0znm8p-nixos-system-whombat-26.05.20260924.c508844",
+        "narHash": "sha256:91ca15ac56119d0308f7dfbdf2acecc1e9dad0e312a6e8fa238c2941e448f422",
+        "abi": 1
+       },
+       "manager": {
+        "version": "0.3.0-20261122214237.1680a52",
+        "storePath": "/nix/store/60m7kz8npmdx29x2ap9dx9f7garqc8zk-whombat-manager-0.3.0-20261122214237.1680a52",
+        "narHash": "sha256:2172fc4825401c75a4fd1a8fa15066edbc9769ccbf17c48d0fd0cda51338c4f4"
+       }
+      }
+     }
+    },
+    "hashes": {
+     "sha256": "33b34d7d839cd1370ef752f6652fbbf486acabf6e5db42427029193d9d96513a"
+    },
+    "length": 878
+   },
+   "production/releases/whombat-20261123.4.json": {
+    "custom": {
+     "whombat": {
+      "kind": "release-tuple",
+      "tuple": {
+       "releaseId": "whombat-20261123.4",
+       "runtime": {
+        "version": "0.2.0-20261123083323.1d43577",
+        "storePath": "/nix/store/vn7wydjzbn400qkim2k7d99952pylkmg-whombat-runtime-0.2.0-20261123083323.1d43577",
+        "narHash": "sha256:b2895bf9f1854037221b666bf9077de5a15036135495c92718d9d2ed50eabbba",
+        "schemaReads": {
+         "min": 77,
+         "max": 92
+        },
+        "schemaWrites": 92,
+        "protocol": {
+         "min": 5000,
+         "max": 5003
+        },
+        "hostAbi": {
+         "min": 1,
+         "max": 1
+        }
+       },
+       "providers": [],
+       "host": {
+        "version": "whombat-20261123.4",
+        "storePath": "/nix/store/2glhhbmbf6bxzsxz2cjwpdjjmy3dpf4s-nixos-system-whombat-26.05.20260924.c508844",
+        "narHash": "sha256:ed404c814852f3ab24ec8a9db6e25dd991423923a4db6979918ba6e193d0f663",
+        "abi": 1
+       },
+       "manager": {
+        "version": "0.3.0-20261123083323.1d43577",
+        "storePath": "/nix/store/9yj31v0q2f9nb0w5bb3qkdhcqy16jy8s-whombat-manager-0.3.0-20261123083323.1d43577",
+        "narHash": "sha256:88450492449a8300d46876a296b770955d020bf382279cc846d1f5d7566fc28d"
+       }
+      }
+     }
+    },
+    "hashes": {
+     "sha256": "43b47a90760234a55195035da233371e163461fd62e9004811a6e602b2c2575b"
+    },
+    "length": 878
+   },
+   "production/releases/whombat-20261124.1.json": {
+    "custom": {
+     "whombat": {
+      "kind": "release-tuple",
+      "tuple": {
+       "releaseId": "whombat-20261124.1",
+       "runtime": {
+        "version": "0.2.0-20261124090846.7266d4e",
+        "storePath": "/nix/store/5vqvm695vc0d2asg2hm00pcdzhwlvgwx-whombat-runtime-0.2.0-20261124090846.7266d4e",
+        "narHash": "sha256:e601ee3420079721d99c70174c373457184de245210c93bba80b0e770b4677dd",
+        "schemaReads": {
+         "min": 77,
+         "max": 96
+        },
+        "schemaWrites": 96,
+        "protocol": {
+         "min": 5000,
+         "max": 5007
+        },
+        "hostAbi": {
+         "min": 1,
+         "max": 1
+        }
+       },
+       "providers": [],
+       "host": {
+        "version": "whombat-20261123.11",
+        "storePath": "/nix/store/igcmrzwshpl1vja1awwfm32jkf7xdgc2-nixos-system-whombat-26.05.20260924.c508844",
+        "narHash": "sha256:44e4c80939f443a22c9b378fd329e69c7a6e683a6ed4694f6cb57067c0edab81",
+        "abi": 1
+       },
+       "manager": {
+        "version": "0.3.0-20261123165245.4b86649",
+        "storePath": "/nix/store/jg6dfin95fl33lpp11aj6fyj5hnvq5f8-whombat-manager-0.3.0-20261123165245.4b86649",
+        "narHash": "sha256:a3ab44be0e0a19cd39290edef7fa1821a600f905092fea3e76e92da662c78047"
+       }
+      }
+     }
+    },
+    "hashes": {
+     "sha256": "a44a3c89160a481d8f79e673d789f22b9539a79ca363402ee228cf07a1ce9bb2"
+    },
+    "length": 879
+   },
+   "production/releases/whombat-20261124.2.json": {
+    "custom": {
+     "whombat": {
+      "kind": "release-tuple",
+      "tuple": {
+       "releaseId": "whombat-20261124.2",
+       "runtime": {
+        "version": "0.2.0-20261124095749.1bc5b2e",
+        "storePath": "/nix/store/3ckynf9qsw7psrq6xdqifcjz9g80hbg2-whombat-runtime-0.2.0-20261124095749.1bc5b2e",
+        "narHash": "sha256:56173124e4dfd0286f7cf127053fde587c68d85fe3756854fef212679d74ca0b",
+        "schemaReads": {
+         "min": 77,
+         "max": 96
+        },
+        "schemaWrites": 96,
+        "protocol": {
+         "min": 5000,
+         "max": 5007
+        },
+        "hostAbi": {
+         "min": 1,
+         "max": 1
+        }
+       },
+       "providers": [],
+       "host": {
+        "version": "whombat-20261123.11",
+        "storePath": "/nix/store/igcmrzwshpl1vja1awwfm32jkf7xdgc2-nixos-system-whombat-26.05.20260924.c508844",
+        "narHash": "sha256:44e4c80939f443a22c9b378fd329e69c7a6e683a6ed4694f6cb57067c0edab81",
+        "abi": 1
+       },
+       "manager": {
+        "version": "0.3.0-20261123165245.4b86649",
+        "storePath": "/nix/store/jg6dfin95fl33lpp11aj6fyj5hnvq5f8-whombat-manager-0.3.0-20261123165245.4b86649",
+        "narHash": "sha256:a3ab44be0e0a19cd39290edef7fa1821a600f905092fea3e76e92da662c78047"
+       }
+      }
+     }
+    },
+    "hashes": {
+     "sha256": "dddeb973588c76fa859e4c1ab7b7f10e129630f9daedcf81b4b6d31df6f30ec2"
+    },
+    "length": 879
+   },
+   "production/releases/whombat-20261124.3.json": {
+    "custom": {
+     "whombat": {
+      "kind": "release-tuple",
+      "tuple": {
+       "releaseId": "whombat-20261124.3",
+       "runtime": {
+        "version": "0.2.0-20261124133047.e7ffd98",
+        "storePath": "/nix/store/l8x59vxgfhgm6bw2mqpr1dqbbxqvd97y-whombat-runtime-0.2.0-20261124133047.e7ffd98",
+        "narHash": "sha256:7902bf5f8b7c539e21ba6062541149e12458e093c7981da551b4210dfe132d3c",
+        "schemaReads": {
+         "min": 77,
+         "max": 99
+        },
+        "schemaWrites": 99,
+        "protocol": {
+         "min": 5000,
+         "max": 5008
+        },
+        "hostAbi": {
+         "min": 1,
+         "max": 1
+        }
+       },
+       "providers": [],
+       "host": {
+        "version": "whombat-20261123.11",
+        "storePath": "/nix/store/igcmrzwshpl1vja1awwfm32jkf7xdgc2-nixos-system-whombat-26.05.20260924.c508844",
+        "narHash": "sha256:44e4c80939f443a22c9b378fd329e69c7a6e683a6ed4694f6cb57067c0edab81",
+        "abi": 1
+       },
+       "manager": {
+        "version": "0.3.0-20261123165245.4b86649",
+        "storePath": "/nix/store/jg6dfin95fl33lpp11aj6fyj5hnvq5f8-whombat-manager-0.3.0-20261123165245.4b86649",
+        "narHash": "sha256:a3ab44be0e0a19cd39290edef7fa1821a600f905092fea3e76e92da662c78047"
+       }
+      }
+     }
+    },
+    "hashes": {
+     "sha256": "4a37c7d51ab9d59d5b7fe480e024afcb9a51f711cfdb4902959bab9d04279d0d"
+    },
+    "length": 879
+   },
+   "production/runtime/0.2.0-20261122115939.4d8628a/whombat-runtime.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "runtime-bundle",
+      "version": "0.2.0-20261122115939.4d8628a",
+      "storePath": "/nix/store/y7vxq4ac577ag5wlvcnqq1qwsvm421fk-whombat-runtime-0.2.0-20261122115939.4d8628a",
+      "narHash": "sha256:26f4b9b57774a31846299b0658cef7e517a599c6ce4aab4c73596e00cf35a1df",
+      "closureSize": 918230256,
+      "paths": 163,
+      "downloadSize": 260493495
+     }
+    },
+    "hashes": {
+     "sha256": "950c6ecfb0c0bf70947b421a363acdc8cd3c2033bc07ab7920404971948d6302"
+    },
+    "length": 89706
+   },
+   "production/runtime/0.2.0-20261122214237.1680a52/whombat-runtime.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "runtime-bundle",
+      "version": "0.2.0-20261122214237.1680a52",
+      "storePath": "/nix/store/596pky7ddc413vvad85mgh8ysbkavhh7-whombat-runtime-0.2.0-20261122214237.1680a52",
+      "narHash": "sha256:63a2be463d35170910b97b8dff2a1dfe33dae8fc78e04587632a13a7801fbf13",
+      "closureSize": 918248184,
+      "paths": 163,
+      "downloadSize": 260503961
+     }
+    },
+    "hashes": {
+     "sha256": "cb7060f19030a7bd5f5e93c5924d3a4e7006130365e6e1f731ff6a9c6660ecec"
+    },
+    "length": 89706
+   },
+   "production/runtime/0.2.0-20261123083323.1d43577/whombat-runtime.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "runtime-bundle",
+      "version": "0.2.0-20261123083323.1d43577",
+      "storePath": "/nix/store/vn7wydjzbn400qkim2k7d99952pylkmg-whombat-runtime-0.2.0-20261123083323.1d43577",
+      "narHash": "sha256:b2895bf9f1854037221b666bf9077de5a15036135495c92718d9d2ed50eabbba",
+      "closureSize": 918366272,
+      "paths": 163,
+      "downloadSize": 260542635
+     }
+    },
+    "hashes": {
+     "sha256": "741e580f78c9df4a842738d1ccb2e5b46a2d113f7a22db04c6bc3997823f507e"
+    },
+    "length": 89706
+   },
+   "production/runtime/0.2.0-20261124090846.7266d4e/whombat-runtime.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "runtime-bundle",
+      "version": "0.2.0-20261124090846.7266d4e",
+      "storePath": "/nix/store/5vqvm695vc0d2asg2hm00pcdzhwlvgwx-whombat-runtime-0.2.0-20261124090846.7266d4e",
+      "narHash": "sha256:e601ee3420079721d99c70174c373457184de245210c93bba80b0e770b4677dd",
+      "closureSize": 918980744,
+      "paths": 163,
+      "downloadSize": 260705172
+     }
+    },
+    "hashes": {
+     "sha256": "2a3a906917eedd9409b27384aad794b35724ce28966f8d2f596d98f10c3ac4e9"
+    },
+    "length": 89706
+   },
+   "production/runtime/0.2.0-20261124095749.1bc5b2e/whombat-runtime.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "runtime-bundle",
+      "version": "0.2.0-20261124095749.1bc5b2e",
+      "storePath": "/nix/store/3ckynf9qsw7psrq6xdqifcjz9g80hbg2-whombat-runtime-0.2.0-20261124095749.1bc5b2e",
+      "narHash": "sha256:56173124e4dfd0286f7cf127053fde587c68d85fe3756854fef212679d74ca0b",
+      "closureSize": 918980584,
+      "paths": 163,
+      "downloadSize": 260707270
+     }
+    },
+    "hashes": {
+     "sha256": "78ce6445d716e1222e981d0f06eacbed66c496e086f2261dc6af47510010404a"
+    },
+    "length": 89706
+   },
+   "production/runtime/0.2.0-20261124133047.e7ffd98/whombat-runtime.index.json": {
+    "custom": {
+     "whombat": {
+      "kind": "closure-index",
+      "of": "runtime-bundle",
+      "version": "0.2.0-20261124133047.e7ffd98",
+      "storePath": "/nix/store/l8x59vxgfhgm6bw2mqpr1dqbbxqvd97y-whombat-runtime-0.2.0-20261124133047.e7ffd98",
+      "narHash": "sha256:7902bf5f8b7c539e21ba6062541149e12458e093c7981da551b4210dfe132d3c",
+      "closureSize": 933382536,
+      "paths": 163,
+      "downloadSize": 264071840
+     }
+    },
+    "hashes": {
+     "sha256": "1e55d9998794e1403d396297bb7789043aa0b22c252cb94d792f8485804c128a"
+    },
+    "length": 89706
+   }
+  },
+  "version": 11
+ }
+}

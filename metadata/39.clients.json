@@ -1,0 +1,70 @@
+{
+ "signatures": [
+  {
+   "keyid": "3c68fdaf61b2a4e5d2faf02f5c3e9c4ca3aa2e8e5896205ed1188dc9423e86bc",
+   "sig": "521dec0b0f09bbfef9e837519619049c14ad4abca3fb795cc24ef85253b57e1063aadd0cca97832a88ce4c3056b624d00d789f0fc86ed974c52fbf22ee25a20e"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "expires": "2026-12-15T11:18:35.645449357Z",
+  "spec_version": "1.0.31",
+  "targets": {
+   "clients/channel.json": {
+    "hashes": {
+     "sha256": "4dcf6a00cb902dc58bb5783b1908ed459f16db9f3083b93e4630494024f1eac2"
+    },
+    "length": 6384
+   },
+   "clients/claude/2.1.283/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "931e0ef74487398ce13c2002b4b3c983aa10b6c742fc6a874b35659b7dee7749"
+    },
+    "length": 109104052
+   },
+   "clients/claude/2.1.284/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "4269d8e144e6b1e3af6958973baad59ce659819b4ff433a334b3e14ea94778a8"
+    },
+    "length": 109314103
+   },
+   "clients/claude/2.1.285/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "7afa2a3d6f9c2919b5c0ddaada15e454b5f18f294b59589c8001a660d23d1559"
+    },
+    "length": 108104410
+   },
+   "clients/claude/2.1.302/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "14fd8507590a6c94e61817778e39e30b7c1a0d86d31f636cd5b528e18e535f78"
+    },
+    "length": 129091461
+   },
+   "clients/codex/0.159.2/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "9e2d29a713b94478b240dec2f10e11324cd05fad76dc43e7c639bdf8a1337a6b"
+    },
+    "length": 159961162
+   },
+   "clients/codex/0.159.3/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "3930f31ac5fca861ea3e444e2683f261190d96b63fba58e0a40a879174369cdf"
+    },
+    "length": 159936968
+   },
+   "clients/codex/0.160.0/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "4fcc47ab57f52ff75363951a8761146cd10c8288bd86fed45487dbb204a16b71"
+    },
+    "length": 160727443
+   },
+   "clients/codex/0.160.1/linux-x86_64.tar.gz": {
+    "hashes": {
+     "sha256": "340801565906a7028f6baaa9ab6853addaef221f0016a1417a7c1ffdd96c21f0"
+    },
+    "length": 160785122
+   }
+  },
+  "version": 39
+ }
+}
